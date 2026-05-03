@@ -1,7 +1,16 @@
 {
   "headers": {
-    "x-nextjs-stale-time": "4294967294",
+    "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/client/layout,_N_T_/client/invoices/layout,_N_T_/client/invoices/page,_N_T_/client/invoices"
-  }
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/client/invoices/__PAGE__",
+    "/client/invoices",
+    "/client",
+    "/_index",
+    "/_head"
+  ]
 }

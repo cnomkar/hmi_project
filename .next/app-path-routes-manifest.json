@@ -1,1 +1,23 @@
-{"/_not-found/page":"/_not-found","/client/contracts/page":"/client/contracts","/auth/sign-in/page":"/auth/sign-in","/client/invoices/page":"/client/invoices","/client/my-projects/page":"/client/my-projects","/auth/sign-up/page":"/auth/sign-up","/client/messages/page":"/client/messages","/client/post-project/page":"/client/post-project","/client/settings/page":"/client/settings","/freelancers/clients/page":"/freelancers/clients","/freelancers/invoices/page":"/freelancers/invoices","/client/dashboard/page":"/client/dashboard","/client/find-talent/page":"/client/find-talent","/freelancers/earnings/page":"/freelancers/earnings","/client/talent/[id]/page":"/client/talent/[id]","/freelancers/settings/page":"/freelancers/settings","/freelancers/projects/page":"/freelancers/projects","/freelancers/dashboard/page":"/freelancers/dashboard","/page":"/","/freelancers/time-log/page":"/freelancers/time-log"}
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/auth/sign-in/page": "/auth/sign-in",
+  "/auth/sign-up/page": "/auth/sign-up",
+  "/client/contracts/page": "/client/contracts",
+  "/client/dashboard/page": "/client/dashboard",
+  "/client/find-talent/page": "/client/find-talent",
+  "/client/invoices/page": "/client/invoices",
+  "/client/messages/page": "/client/messages",
+  "/client/my-projects/page": "/client/my-projects",
+  "/client/post-project/page": "/client/post-project",
+  "/client/settings/page": "/client/settings",
+  "/client/talent/[id]/page": "/client/talent/[id]",
+  "/freelancers/clients/page": "/freelancers/clients",
+  "/freelancers/dashboard/page": "/freelancers/dashboard",
+  "/freelancers/earnings/page": "/freelancers/earnings",
+  "/freelancers/invoices/page": "/freelancers/invoices",
+  "/freelancers/projects/page": "/freelancers/projects",
+  "/freelancers/settings/page": "/freelancers/settings",
+  "/freelancers/time-log/page": "/freelancers/time-log",
+  "/page": "/"
+}

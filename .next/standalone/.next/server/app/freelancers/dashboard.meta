@@ -1,7 +1,16 @@
 {
   "headers": {
-    "x-nextjs-stale-time": "4294967294",
+    "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/freelancers/layout,_N_T_/freelancers/dashboard/layout,_N_T_/freelancers/dashboard/page,_N_T_/freelancers/dashboard"
-  }
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/freelancers/dashboard/__PAGE__",
+    "/freelancers/dashboard",
+    "/freelancers",
+    "/_index",
+    "/_head"
+  ]
 }
