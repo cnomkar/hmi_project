@@ -103,11 +103,14 @@ export function PortalFrame({
         </nav>
 
         <div className="sidebar-footer">
-          <div className="side-note">
-            <p className="caption">Live sync</p>
-            <strong>Changes are shared instantly across both portals.</strong>
-          </div>
-          <button className="secondary-btn" type="button" onClick={() => signOut()}>
+          <button
+            className="secondary-btn"
+            type="button"
+            onClick={() => {
+              signOut();
+              router.replace('/auth/sign-in');
+            }}
+          >
             <LogOut size={16} />
             Sign out
           </button>
@@ -218,6 +221,18 @@ export function PortalFrame({
                   </Link>
                 );
               })}
+              <button
+                className="secondary-btn"
+                type="button"
+                onClick={() => {
+                  signOut();
+                  setMenuOpen(false);
+                  router.replace('/auth/sign-in');
+                }}
+              >
+                <LogOut size={16} />
+                Sign out
+              </button>
             </div>
           </div>
         </div>

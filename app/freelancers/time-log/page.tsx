@@ -1,11 +1,19 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { Pause, Play, Plus, Square, TimerReset } from 'lucide-react';
+import { Pause, Play, Plus, Square } from 'lucide-react';
 import { PortalFrame } from '@/components/portal-frame';
 import { Card, MetricCard, formatDate } from '@/components/common';
 import { useApp } from '@/lib/storage';
 import { formatTimeEntry } from '@/lib/utils';
+
+function formatStopwatch(totalSeconds: number) {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
 
 export default function FreelancerTimeLogPage() {
   const { state, addTimeEntry } = useApp();
@@ -48,7 +56,7 @@ export default function FreelancerTimeLogPage() {
   return (
     <PortalFrame role="freelancer" title="Time Log" subtitle="Track billable work and manual entries.">
       <div className="stats-grid">
-        <MetricCard title="Recording" value={formatTimeEntry(Math.max(seconds / 60, 0))} detail="Current timer" />
+        <MetricCard title="Recording" value={formatStopwatch(seconds)} detail="Current timer" />
         <MetricCard title="Logged today" value={formatTimeEntry(state.timeEntries.filter(entry => new Date(entry.date).toDateString() === new Date().toDateString()).reduce((sum, entry) => sum + entry.durationMinutes, 0))} />
         <MetricCard title="Billable" value={String(state.timeEntries.filter(entry => entry.billable).length)} />
         <MetricCard title="Activity" value="28 days" detail="Consistency view" />

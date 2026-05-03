@@ -8,7 +8,7 @@ import { Card, MetricCard, StatusBadge, formatDate, formatMoney } from '@/compon
 import { useApp } from '@/lib/storage';
 
 export default function FreelancerDashboardPage() {
-  const { state, updateProject, updateInvoice } = useApp();
+  const { state, updateProject } = useApp();
   const [search, setSearch] = useState('');
 
   const projects = useMemo(
@@ -64,8 +64,8 @@ export default function FreelancerDashboardPage() {
                 </span>
                 <strong>{formatMoney(invoice.lineItems.reduce((sum, item) => sum + item.quantity * item.rate, 0))}</strong>
                 <div className="row-actions">
-                  <button className="secondary-btn" type="button" onClick={() => updateInvoice(invoice.id, { status: 'query' })}>Query</button>
-                  <button className="primary-btn" type="button" onClick={() => updateInvoice(invoice.id, { status: 'paid' })}>Mark paid</button>
+                  <Link className="secondary-btn" href="/freelancers/invoices">View invoices</Link>
+                  <span className="badge">Client approval required</span>
                 </div>
               </div>
             ))}
